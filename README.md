@@ -1,7 +1,7 @@
 # Sigma-web-Development-2025
 # 🚀 My Complete Web Development Journey
 
-Hi, I'm **Nargis Perween** 👩‍💻  <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/039df79d-402b-4cfc-86a4-652cf78cb4c9" />
+Hi, I'm **Nargis Perween** 👩‍💻  <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/039df79d-402b-4cfc-86a4-652cf78cb4c9" />
 
 I’m excited to announce that I’ve officially started my journey to become a **Full-Stack Web Developer**!
 
@@ -53,6 +53,7 @@ By the end of this journey, I aim to:
 
 ## 🔗 Follow Along
 Feel free to follow my progress and projects here on GitHub.  
+https://github.com/Nargis7/Sigma-web-Development-2025.git
 Stay tuned for upcoming repos and updates!
 
 > 💡 Let’s connect and grow together!
