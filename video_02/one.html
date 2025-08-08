@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Tilt Gradient Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1c1c1c;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      perspective: 1000px; /* for 3D effect */
+    }
+
+    .card {
+      background: linear-gradient(135deg, orange, red, purple, cyan);
+      padding: 4px;
+      border-radius: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      width: 250px;
+    }
+
+    .card-inner {
+      background: rgba(0, 0, 0, 0.7); /* glass effect */
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 25px;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      text-align: left;
+      transition: transform 0.4s ease;
+    }
+
+    /* 3D lift + tilt on hover */
+    .card:hover {
+      transform: rotateY(-5deg) rotateX(5deg) translateY(-15px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .card-inner h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card-inner p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-inner">
+        <h2>Fresh From<br>the Almanac</h2>
+        <p>Properties, selectors, rules,<br>and functions!</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <h2>sibling-index()</h2>
+        <p>Use index() to animate list items differently.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <h2>::scroll-button()</h2>
+        <p>Customize scrollbar buttons with pseudo-elements.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <h2>text-box-trim</h2>
+        <p>Use `text-box-trim` for cleaner typography flow.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.message-box{
+  padding: 2px;
+  border-radius: 12px;
+   background: linear-gradient(90deg, orange, red, purple, cyan);
+}
+.message-inner{
+  background-color: #111;
+  padding: 20px 30px;
+  color: white;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+   .message-inner a {
+      color: #1e90ff;
+      text-decoration: none;
+   }
+
+   .message-inner a:hover {
+      text-decoration: underline;
+   }

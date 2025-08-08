@@ -1,0 +1,10 @@
+body{
+  background-color: aqua;
+  color: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  text-shadow: chartreuse 2px 2px 2px;
+}

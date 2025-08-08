@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+  margin: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: fit-content(100px) fit-content(200px) 1fr;
+  grid-gap: 1rem;
+}
+.grid-item {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 200vh;
+  font-family: monospace;
+}
+
+p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 23em);
+}
+
+span {
+  background: linear-gradient(90deg, rgb(24, 168, 53) 0 0) 
+      0 / calc(var(--n) * 1ch) no-repeat pink;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text 1s steps(var(--n, 100)) forwards;
+  animation-timeline: scroll(root);
+}
+
+span a {
+  all: unset;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes text {
+  0% {
+    background-size: 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+  <div class="grid-item">Short Label (100px)</div>
+  <div class="grid-item">Short Label (300px)</div>
+  <div class="grid-item">This is a longer piece of content that fills the remaining space in the grid.</div>
+  <div class="grid-item">Icon (100px)</div>
+  <div class="grid-item">Another content block but larger (300px)</div>
+  <div class="grid-item">Another content block that expands to fill the available space.</div>
+  <p style="--n: 193">
+  <span>This is a simple demo showing what type of animation the CSS <code>scroll()</code> function can do. It was inspired by the outro section of Geoff's article on <a target="_blank" href="https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/">"Unleash the Power of Scroll-Driven Animation"</a>.</span>
+</p>
+</div>
+</body>
+</html>
