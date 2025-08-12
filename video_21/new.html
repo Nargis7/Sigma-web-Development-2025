@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Browser Events Playground</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      min-height: 2000px; /* so we can scroll */
+    }
+    button {
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #hoverBox {
+      width: 200px;
+      height: 100px;
+      background: lightgray;
+      line-height: 100px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    #log {
+      border: 1px solid black;
+      padding: 10px;
+      max-height: 150px;
+      overflow-y: auto;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎯 Browser Events Playground</h1>
+
+<!-- Click Event -->
+<button id="clickBtn">Click Me</button>
+
+<!-- Hover Event -->
+<div id="hoverBox">Hover Over Me</div>
+
+<!-- Key Press Event -->
+<input type="text" id="keyInput" placeholder="Type something...">
+
+<!-- Event Log -->
+<h3>Event Log:</h3>
+<div id="log"></div>
+
+<script>
+  const logBox = document.getElementById("log");
+
+  function logEvent(message) {
+    let p = document.createElement("p");
+    p.textContent = message;
+    logBox.appendChild(p);
+    logBox.scrollTop = logBox.scrollHeight; // auto-scroll
+  }
+
+  // Click event
+  document.getElementById("clickBtn").addEventListener("click", function() {
+    logEvent("🖱 Click Event Triggered!");
+  });
+
+  // Hover events
+  const hoverBox = document.getElementById("hoverBox");
+  hoverBox.addEventListener("mouseover", function() {
+    hoverBox.style.background = "lightgreen";
+    logEvent("🐭 Mouse Over Event Triggered!");
+  });
+  hoverBox.addEventListener("mouseout", function() {
+    hoverBox.style.background = "lightgray";
+    logEvent("🐭 Mouse Out Event Triggered!");
+  });
+
+  // Key press event
+  document.getElementById("keyInput").addEventListener("keydown", function(e) {
+    logEvent(`⌨ Key Pressed: ${e.key}`);
+  });
+
+  // Scroll event
+  window.addEventListener("scroll", function() {
+    logEvent(`📜 Page Scrolled! ScrollY: ${window.scrollY}`);
+  });
+</script>
+
+</body>
+</html>

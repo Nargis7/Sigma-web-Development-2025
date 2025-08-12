@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="title">Hover over me!</h1>
+<input type="text" id="myInput" placeholder="Type something">
+
+<script>
+  // Mouseover event
+  document.getElementById("title").addEventListener("mouseover", function() {
+    this.style.color = "red";
+  });
+
+  // Mouseout event
+  document.getElementById("title").addEventListener("mouseout", function() {
+    this.style.color = "black";
+  });
+
+  // Keydown event
+  document.getElementById("myInput").addEventListener("keydown", function(e) {
+    console.log("Key pressed:", e.key);
+  });
+
+  // Page load event
+  window.addEventListener("load", function() {
+    alert("Page loaded!");
+  });
+</script>
+
+</body>
+</html>
